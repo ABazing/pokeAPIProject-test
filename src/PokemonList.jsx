@@ -19,7 +19,14 @@ function PokemonList({ onSelect }) {
     <div className="pokemon-list">
       {pokemons.map(pokelist => {
         console.log(pokelist.name)
-        return(<h3>{pokelist.name}</h3>)
+        return(<>
+          <div>
+            <img src={pokelist.sprites.front_default} alt={pokelist.name}/>
+            <h3>{pokelist.name}</h3>
+          </div>
+        </>
+      )
+        //return(<h3>{pokelist.name}</h3>)
       })}
     </div>
   );
