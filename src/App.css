@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   padding: 20px;
+  background-color: #64b1bb;
 }
 
 .pokemon-list {
@@ -8,4 +9,26 @@
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
+}
+
+.pokemon-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.pokemon-image {
+  border: 10px #f80000;
+  padding: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pokemon-image:hover {
+  transform: scale(1.1)
+}
+
+.pokemon-page {
+  background-color: #64b1bb;
 }

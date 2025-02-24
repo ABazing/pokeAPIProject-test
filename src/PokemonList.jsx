@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import PokemonPage from './PokemonPage';
+// import { currentPage, setCurrentPage } from './App'
 
-function PokemonList({ onSelect }) {
+function PokemonList({ onSelect, setCurrentPage, setSelectedPokemon }) {
   const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
@@ -17,17 +19,13 @@ function PokemonList({ onSelect }) {
 
   return (
     <div className="pokemon-list">
-      {pokemons.map(pokelist => {
-        console.log(pokelist.name)
-        return(<>
-          <div>
-            <img src={pokelist.sprites.front_default} alt={pokelist.name}/>
-            <h3>{pokelist.name}</h3>
-          </div>
-        </>
-      )
-        //return(<h3>{pokelist.name}</h3>)
-      })}
+      {pokemons.map(pokelist => (
+        //console.log(pokelist.name)
+        <div className="pokemon-image" key={pokelist.id} onClick={() => onSelect(pokelist)}>
+          <img src={pokelist.sprites.front_default} alt={pokelist.name}/>
+          <h3>{pokelist.name}</h3>
+        </div>
+      ))}
     </div>
   );
 }
