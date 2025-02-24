@@ -1,17 +1,20 @@
-.App {
-  text-align: center;
-  padding: 20px;
+body {
   background-color: #64b1bb;
 }
 
-.pokemon-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-.pokemon-page {
+.App {
+  text-align: center;
+  padding: 20px;
+  /* background-color: #64b1bb; */
+}
+
+.pokemon-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -30,5 +33,28 @@
 }
 
 .pokemon-page {
-  background-color: #64b1bb;
+  display: flex  ;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-page .pokemon-sprite{
+  width: 350px;
+  height: 350px;
+}
+
+.pokemon-page .discription{
+  text-align: center;
+}
+
+.pokemon-page .abilities{
+  text-align: center;
+}
+
+.pokemon-page .stats{
+  text-align: center;
+}
+
+.pokemon-page .moves{
+  text-align: center;
 }

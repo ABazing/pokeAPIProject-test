@@ -23,8 +23,7 @@ export default function App() {
         )
       case 'pokemonPage':
         return (<>
-          <div className="App">
-            <h3>Hello!</h3>
+          <div className="pokemon-page">
             <PokemonPage pokemon={selectedPokemon} />
           </div>
         </>
@@ -33,12 +32,12 @@ export default function App() {
   }
 
   return (
-    <div>
+    <>
       <nav>
         <button onClick={() => setCurrentPage('home')}>Home</button>
       </nav>
       {renderPage()}
-    </div>
+    </>
   );
 }
 
