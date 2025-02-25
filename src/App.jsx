@@ -23,9 +23,9 @@ export default function App() {
         )
       case 'pokemonPage':
         return (<>
-          <div className="pokemon-page">
+          {/* <div className="pokemon-page"> */}
             <PokemonPage pokemon={selectedPokemon} />
-          </div>
+          {/* </div> */}
         </>
       )
     }

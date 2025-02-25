@@ -23,7 +23,7 @@ function PokemonList({ onSelect, setCurrentPage, setSelectedPokemon }) {
         //console.log(pokelist.name)
         <div className="pokemon-image" key={pokelist.id} onClick={() => onSelect(pokelist)}>
           <img src={pokelist.sprites.front_default} alt={pokelist.name}/>
-          <h3>{pokelist.name}</h3>
+          <h3>{pokelist.name.toUpperCase()}</h3>
         </div>
       ))}
     </div>
